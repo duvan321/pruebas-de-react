@@ -1,3 +1,3 @@
 # pruebas-de-react
 
-mi sitio: https://github.com/duvan321/pruebas-de-react/
+mi sitio: https://duvan321.github.io/pruebas-de-react/
