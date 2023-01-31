@@ -3,7 +3,7 @@ import "../style/Informacion.css";
 function Informacion() {
   return (
     <div>
-      <div className="card">
+      <div className="card text-center">
       <h2 className="card-title">Informacion.test</h2>
         <img
           src="https://e00-marca.uecdn.es/assets/multimedia/imagenes/2021/12/13/16394194098280.jpg"

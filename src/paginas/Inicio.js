@@ -1,9 +1,61 @@
-import React from 'react'
+import { useState } from "react";
 
+import "../style/Inicio.css";
 function Inicio() {
-  return (
-    <div>Inicio</div>
-  )
-}
+  const [error] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  
 
-export default Inicio
+  const handleClick = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    
+ 
+  };
+  return (
+    <div className="container text-center mt-5">
+     
+     <div className="titulos">
+      Mis pruebas con input
+     </div>
+      <form>
+        <input
+          type="text"
+          placeholder="username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
+        <input
+          type="password"
+          placeholder="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <button
+          className="btn btn-secondary "
+          disabled={!username || !password}
+          onClick={handleClick}
+        >
+          {loading ? "please wait" : "Login"}
+        </button>
+        <label className="">
+        <span
+          className="input-group-text"
+          id="inputGroup-sizing-sm"
+          data-testid="error"
+          style={{ visibility: error ? "visible" : "hidden" }}
+        >
+          ¡Algo salió mal!
+        </span>
+        </label>
+      </form>
+    </div>
+
+
+);
+}
+  
+
+export default Inicio;

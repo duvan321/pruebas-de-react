@@ -8,9 +8,9 @@ const Navbar = () =>{
 
 <nav className="navbar navbar-expand-lg bg-dark">
   <div className="container-fluid">
-    <a className="navbar-brand" href="#">My App</a>
+    <a className="navbar-brand" href="https://github.com/duvan321/pruebas-de-react">Mi pruebas</a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon bg-light"></span>
+      <span className="navbar-toggler-icon"></span>
     </button>
     <div className="collapse navbar-collapse" id="navbarNavDropdown">
       <ul className="navbar-nav">
@@ -28,6 +28,7 @@ const Navbar = () =>{
           <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><Link className="dropdown-item" to="/contacto">h1, p</Link ></li>
             <li><Link className="dropdown-item" to="/informacion">Estilos</Link ></li>
+            <li><Link className="dropdown-item" to="/input">input img</Link ></li>
             
           </ul>
         </li>

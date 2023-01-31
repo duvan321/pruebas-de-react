@@ -5,7 +5,7 @@ import Inicio from "./paginas/Inicio"
 import Destacados from "./paginas/Destacados"
 import Contacto from "./paginas/Contacto"
 import Informacion from "./paginas/Informacion"
-
+import EditSesion from "./paginas/EditSesion"
 function App() {
   return (
     <div className="App">
@@ -19,6 +19,7 @@ function App() {
         <Route path= "/contacto" element={<Contacto/>}/>
         <Route path="/destacados" element={<Destacados/>} />
         <Route path= "/informacion" element={<Informacion/>} />
+        <Route path= "/input" element={<EditSesion/>} />
       </Routes>
       </BrowserRouter>
       
