@@ -1,5 +1,5 @@
 import {useState} from 'react'
-
+import "../style/EditSesion.css"
 function EditSesion() {
   const [images, setimages] = useState([]);
 
