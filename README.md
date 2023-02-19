@@ -5,7 +5,16 @@
 </div>
 
 ---
+- working with bootstrap work in navar to link in different projects
 
+- I did tests on titles
+
+- in styles like colors
+- in input
+
+- in checkbox
+
+- in paragraphs
 
 - 📫 How to contact me
 *diegoduvan321@gmail.com*
