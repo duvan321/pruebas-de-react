@@ -5,11 +5,14 @@ function Destacados() {
   const b = 5
   return (
     <div>
-      <h1>frutas y verduras</h1>
+      <h1>fruits and vegetables</h1>
       <ul>
-        <li>naranjas</li> <li>manzana</li> <li>uvas</li> <li>fresas</li> <li>mangos</li> <li>platano</li> <li>lechuga</li> <li>zanahoria</li> <li>cebolla</li> <li>papa</li>
+        <li>
+oranges</li> <li>apple</li> <li>grapes
+</li> <li>strawberries</li> <li>mangoes</li> <li>banana</li> <li>
+lettuce</li> <li>carrot</li> <li>onion</li> <li>dad</li>
       </ul>
-      <h1 data-testid="mytestid">la suma de frutas y verdura son :</h1>
+      <h1 data-testid="mytestid">the sum of fruits and vegetables are:</h1>
       <span title="sum">{a+b}</span>
     </div>
   )

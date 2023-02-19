@@ -4,7 +4,7 @@ import Inicio from "../paginas/Inicio";
 
 test("El componente tiene un titulo", () => {
     render(<Inicio />);
-    const h1 = screen.getByText(/Mis pruebas con input/);
+    const h1 = screen.getByText(/My tests with input/);
     expect(h1).toBeInTheDocument(
 );
   });

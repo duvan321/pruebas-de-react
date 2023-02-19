@@ -62,7 +62,7 @@ function EditSesion() {
       <br></br>
       {/* INPUT IMAGES */}
       <label className="btn btn-warning">
-        <span>Seleccionar archivos </span>
+        <span>select files </span>
         <input hidden type="file" multiple onChange={changeInput}></input>
       </label>
 

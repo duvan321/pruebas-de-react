@@ -3,7 +3,7 @@ import Destacados from "../paginas/Destacados";
 
 test("Titulo de lista", () => {
   render(<Destacados />);
-  const LinkElement = screen.getByText(/frutas y verduras/i);
+  const LinkElement = screen.getByText(/the sum of fruits and vegetables are:/i);
   expect(LinkElement).toBeInTheDocument();
 });
 test("Lista de frutas (10)", () => {

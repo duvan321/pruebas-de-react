@@ -16,9 +16,9 @@ function App() {
       <Routes>
         <Route  path= "/" element={<Inicio/>}/>
         
-        <Route path= "/contacto" element={<Contacto/>}/>
-        <Route path="/destacados" element={<Destacados/>} />
-        <Route path= "/informacion" element={<Informacion/>} />
+        <Route path= "/contact" element={<Contacto/>}/>
+        <Route path="/Featured" element={<Destacados/>} />
+        <Route path= "/information" element={<Informacion/>} />
         <Route path= "/input" element={<EditSesion/>} />
       </Routes>
       </BrowserRouter>

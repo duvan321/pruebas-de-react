@@ -6,7 +6,7 @@ import Contacto from "../paginas/Contacto"
 describe("productpage", ()=>{
     test("El componente tiene un titulo", () => {
         render(<Contacto />);
-        const h1 = screen.getByText(/Ejemplos de checbox/);
+        const h1 = screen.getByText(/checkbox examples/);
         expect(h1).toBeInTheDocument(
     );
       });
@@ -21,7 +21,7 @@ describe("productpage", ()=>{
     //let checkbox;
   test("si el checkbox esta en el componenete y esta desactivado",()=>{
     render(<Contacto/>)
-    const  checkbox = screen.getByText("Acepta las cookies")
+    const  checkbox = screen.getByText("Accept cookies")
    
     expect(checkbox).toBeInTheDocument();
     expect(checkbox).not.toBeChecked();
