@@ -1,13 +1,13 @@
-import {useState} from 'react'
-import "../style/EditSesion.css"
-function EditSesion() {
+import { useState } from "react";
+import "../style/EditSession.css";
+function EditSession() {
   const [images, setimages] = useState([]);
 
   const changeInput = (e) => {
-    //esto es el indice que se le dará a cada imagen, a partir del indice de la ultima foto
+    //This is the index that will be given to each image, from the index of the last photo
     let indexImg;
 
-    //aquí evaluamos si ya hay imagenes antes de este input, para saber en dónde debe empezar el index del proximo array
+    //here we evaluate if there are already images before this input, to know where the index of the next array should start
     if (images.length > 0) {
       indexImg = images[images.length - 1].index + 1;
     } else {
@@ -24,7 +24,7 @@ function EditSesion() {
   function readmultifiles(e, indexInicial) {
     const files = e.currentTarget.files;
 
-    //el array con las imagenes nuevas
+    //the array with the new images
     const arrayImages = [];
 
     Object.keys(files).forEach((i) => {
@@ -37,18 +37,18 @@ function EditSesion() {
         index: indexInicial,
         name: file.name,
         url,
-        file
+        file,
       });
 
       indexInicial++;
     });
 
-    //despues de haber concluido el ciclo retornamos las nuevas imagenes
+    //After having concluded the cycle we return the new images
     return arrayImages;
   }
 
   function deleteImg(indice) {
-    //console.log("borrar img " + indice);
+    //console.log("delete img " + index);
 
     const newImgs = images.filter(function (element) {
       return element.index !== indice;
@@ -91,4 +91,4 @@ function EditSesion() {
     </div>
   );
 }
-export default EditSesion
+export default EditSession;

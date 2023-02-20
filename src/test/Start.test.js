@@ -1,58 +1,56 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import Inicio from "../paginas/Inicio";
+import Start from "../pages/Start";
 
-
-test("El componente tiene un titulo", () => {
-    render(<Inicio />);
-    const h1 = screen.getByText(/My tests with input/);
-    expect(h1).toBeInTheDocument(
-);
-  });
-test("la entrada de nombre de usuario debe ser procesada", () => {
-  render(<Inicio />);
+test("The component has a title", () => {
+  render(<Start />);
+  const h1 = screen.getByText(/My tests with input/);
+  expect(h1).toBeInTheDocument();
+});
+test("username input should be processed", () => {
+  render(<Start />);
   const userInputEl = screen.getByPlaceholderText(/username/i);
   expect(userInputEl).toBeInTheDocument();
 });
-test("la entrada de contraseña debe ser procesada", () => {
-  render(<Inicio />);
+test("password input needs to be processed", () => {
+  render(<Start />);
   const passwordInputEl = screen.getByPlaceholderText(/password/i);
   expect(passwordInputEl).toBeInTheDocument();
 });
-test("el botón debe ser renderizado", () => {
-  render(<Inicio />);
+test("the button should be rendered", () => {
+  render(<Start />);
   const buttonEl = screen.getByRole("button");
   expect(buttonEl).toBeInTheDocument();
 });
 
-test("la entrada de nombre de usuario debe estar vacía", () => {
-  render(<Inicio />);
+test("the username input must be empty", () => {
+  render(<Start />);
   const usernameInputEl = screen.getByPlaceholderText(/username/i);
   expect(usernameInputEl.value).toBe("");
 });
-test("la entrada de contraseña debe estar vacía", () => {
-  render(<Inicio />);
+test("password entry must be empty", () => {
+  render(<Start />);
   const passwordInputEl = screen.getByPlaceholderText(/password/i);
   expect(passwordInputEl.value).toBe("");
 });
 
-test("el boton debe estar deshabilitado", () => {
-  render(<Inicio />);
+test("the button must be disabled", () => {
+  render(<Start />);
   const buttonEl = screen.getByRole("button");
   expect(buttonEl).toBeDisabled();
 });
-test("la carga no debe ser renderizada", () => {
-    render(<Inicio />);
-    const buttonEl = screen.getByRole("button");
-    expect(buttonEl).not.toHaveTextContent(/please wait/);
-  });
+test("payload should not be rendered", () => {
+  render(<Start />);
+  const buttonEl = screen.getByRole("button");
+  expect(buttonEl).not.toHaveTextContent(/please wait/);
+});
 test("el error no debe ser visible", () => {
-  render(<Inicio />);
+  render(<Start />);
   const errorEl = screen.getByTestId("error");
   expect(errorEl).not.toBeVisible();
 });
 
-test("la entrada de nombre de usuario debe cambiar", () => {
-  render(<Inicio />);
+test("the username input should change", () => {
+  render(<Start />);
   const usernameInputEl = screen.getByPlaceholderText(/username/i);
   const tesvalue = "test";
   fireEvent.change(usernameInputEl, {
@@ -61,7 +59,7 @@ test("la entrada de nombre de usuario debe cambiar", () => {
   expect(usernameInputEl.value).toBe(tesvalue);
 });
 test("la entrada de contraseña debe cambiar", () => {
-  render(<Inicio />);
+  render(<Start />);
   const passwordInputEl = screen.getByPlaceholderText(/password/i);
   const tesvalue = "test";
   fireEvent.change(passwordInputEl, {
@@ -70,8 +68,8 @@ test("la entrada de contraseña debe cambiar", () => {
   expect(passwordInputEl.value).toBe(tesvalue);
 });
 
-test("el botón no debe deshabilitarse cuando existen entradas", () => {
-  render(<Inicio />);
+test("the button should not be disabled when inputs exist", () => {
+  render(<Start />);
   const buttonEl = screen.getByRole("button");
 
   const usernameInputEl = screen.getByPlaceholderText(/username/i);
@@ -86,16 +84,15 @@ test("el botón no debe deshabilitarse cuando existen entradas", () => {
   expect(buttonEl).not.toBeDisabled();
 });
 
-test("la carga debe representarse al hacer click", () => {
-    render(<Inicio />);
-    const buttonEl = screen.getByRole("button");
-    const usernameInputEl = screen.getByPlaceholderText(/username/i);
-    const tesvalue = "test";
-    fireEvent.change(usernameInputEl, {
-      target: { value: tesvalue },
-    });
-    fireEvent.click(buttonEl);
-    
-    expect(buttonEl).not.toHaveTextContent(/please wait/);
-});
+test("load should be rendered on click", () => {
+  render(<Start />);
+  const buttonEl = screen.getByRole("button");
+  const usernameInputEl = screen.getByPlaceholderText(/username/i);
+  const tesvalue = "test";
+  fireEvent.change(usernameInputEl, {
+    target: { value: tesvalue },
+  });
+  fireEvent.click(buttonEl);
 
+  expect(buttonEl).not.toHaveTextContent(/please wait/);
+});

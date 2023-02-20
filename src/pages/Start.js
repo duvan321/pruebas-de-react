@@ -1,19 +1,18 @@
 import { useState } from "react";
 
-import "../style/Inicio.css";
-function Inicio() {
+import "../style/Start.css";
+function Start() {
   const [error] = useState(false);
   const [loading, setLoading] = useState(false);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
   const handleClick = async (e) => {
     e.preventDefault();
     setLoading(true);
   };
   return (
     <div className="container text-center mt-5">
-      <div className="titulos">My tests with input</div>
+      <div className="title">My tests with input</div>
       <form>
         <input
           type="text"
@@ -49,4 +48,4 @@ function Inicio() {
   );
 }
 
-export default Inicio;
+export default Start;

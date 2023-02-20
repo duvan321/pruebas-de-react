@@ -1,0 +1,13 @@
+.Header {
+  background-color: crimson;
+  text-align: center;
+}
+
+.paragraph {
+  color: blue;
+}
+
+.title {
+  color: aliceblue;
+  font-family: cursive;
+}
